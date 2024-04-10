@@ -3,12 +3,6 @@ using System.Runtime.InteropServices;
 
 unsafe
 {
-    var nintMax = nint.MaxValue;
-
-    var pointer = (void*)nintMax;
-
-    Console.WriteLine("{0:x}", (nuint)pointer);
-
     var mmapNint = mmap.nint();
 
     Console.WriteLine("Allocated nint pointer: 0x{0:x} ({1})", mmapNint, mmapNint);
